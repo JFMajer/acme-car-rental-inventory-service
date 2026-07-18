@@ -25,13 +25,29 @@ public class CarInventory {
     }
 
     private void initialData() {
-    Car mazda = new Car(ids.incrementAndGet(), "ABC123", "Mazda", "6");
+    Car mazda = new Car();
+    mazda.id = ids.incrementAndGet();
+    mazda.licensePlateNumber = "ABC123";
+    mazda.manufacturer = "Mazda";
+    mazda.model = "6";
     cars.add(mazda);
-    Car ford = new Car(ids.incrementAndGet(), "XYZ987", "Ford", "Mustang");
+    Car ford = new Car();
+    ford.id = ids.incrementAndGet();
+    ford.licensePlateNumber = "XYZ987";
+    ford.manufacturer = "Ford";
+    ford.model = "Mustang";
     cars.add(ford);
-    Car toyota = new Car(ids.incrementAndGet(), "LMN456", "Toyota", "Corolla");
+    Car toyota = new Car();
+    toyota.id = ids.incrementAndGet();
+    toyota.licensePlateNumber = "LMN456";
+    toyota.manufacturer = "Toyota";
+    toyota.model = "Corolla";
     cars.add(toyota);
-    Car honda = new Car(ids.incrementAndGet(), "DEF789", "Honda", "Civic");
+    Car honda = new Car();
+    honda.id = ids.incrementAndGet();
+    honda.licensePlateNumber = "DEF789";
+    honda.manufacturer = "Honda";
+    honda.model = "Civic";
     cars.add(honda);
     }
 }

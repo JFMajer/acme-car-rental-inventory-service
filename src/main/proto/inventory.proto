@@ -13,11 +13,11 @@ message InsertCarRequest {
 }
 
 message RemoveCarRequest {
-    string licencePlateNumber = 1;
+    string licensePlateNumber = 1;
 }
 
 message CarResponse {
-    string licencePlateNumber = 1;
+    string licensePlateNumber = 1;
     string manufacturer = 2;
     string model = 3;
     int64 id = 4;

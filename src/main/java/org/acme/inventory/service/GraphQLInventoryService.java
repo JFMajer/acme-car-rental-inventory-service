@@ -23,7 +23,7 @@ public class GraphQLInventoryService {
 
     @Mutation
     public Car register(Car car) {
-        car.setId(CarInventory.ids.incrementAndGet());
+        car.id = CarInventory.ids.incrementAndGet();
         inventory.getCars().add(car);
         return car;
     }
@@ -32,7 +32,7 @@ public class GraphQLInventoryService {
     public boolean remove(String licensePlateNumber) {
         List<Car> cars = inventory.getCars();
         Optional<Car> toBeRemoved = cars.stream()
-            .filter(car -> car.getLicensePlateNumber()
+            .filter(car -> car.licensePlateNumber
                 .equals(licensePlateNumber))
             .findAny();
         if(toBeRemoved.isPresent()) {
